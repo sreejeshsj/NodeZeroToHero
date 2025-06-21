@@ -1,0 +1,2 @@
+hello this is async
+kthis is new line

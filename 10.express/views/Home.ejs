@@ -1,0 +1,16 @@
+<%- include('components/header.ejs') -%>
+    <h2>This is a <%= title %> page (forEach)</h2>
+
+    <ul>
+
+        <% product.forEach(function(product){ %>
+            <li>
+                <%=product.id%>
+            </li>
+
+            <%})%>
+
+    </ul>
+
+
+    <%- include('components/footer.ejs') -%>
