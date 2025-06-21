@@ -1,8 +1,10 @@
 const mongoose = require("mongoose");
+require('dotenv').config();
+const uri = process.env.MONGO_URI;
 
 // mongodb connection
 mongoose
-  .connect("mongodb+srv://sreejeshsj01:LEOMESSI@cluster0.o822jqw.mongodb.net/")
+  .connect(uri)
   .then(() => {
     console.log("Connected Successfully");
   })
@@ -78,10 +80,10 @@ async function runQueries() {
     // console.log(deleteItems)
 
     //update
-    const updateItem= await User.findByIdAndUpdate('68567657493b401f6cdf1877',{
-        $set:{isActive:true},
-    },{new:true})
-    console.log(updateItem)
+    // const updateItem= await User.findByIdAndUpdate('68567657493b401f6cdf1877',{
+    //     $set:{isActive:true},
+    // },{new:true})
+    // console.log(updateItem)
 
 } catch (err) {
     console.log("error:" + err);
